@@ -4,12 +4,12 @@ public class MaximumProfit
 {
 	public double getMaxProfit(int[] price) {
          double profit = 0L;
-        int maxSoFar = 0;
+        int max = 0;
         for (int i = price.length-1;i>-1;i--) {
-            if (price[i]>=maxSoFar) {
-                maxSoFar=price[i];
+            if (price[i]>=max) {
+                max=price[i];
             }
-            profit+=maxSoFar-price[i];
+            profit+=max-price[i];
         }
         return profit;
     }
